@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
 import { VIDEO_API } from "../utils/Constants";
+import ShimmerVideoContainer from "./ShimmerVideoContainer";
 
 // Video Container Present in Main Container
 const VideoContainer = () => {
@@ -40,11 +41,15 @@ const VideoContainer = () => {
   // Video Container
   return (
     <div className="flex flex-wrap justify-evenly md:gap-x-2">
-      {videosList.map((video, index) => (
-        <Link key={video?.id + index} to={"/watch?v=" + video?.id}>
-          <VideoCard info={video} />
-        </Link>
-      ))}
+      {videosList.length === 0 ? (
+        <ShimmerVideoContainer />
+      ) : (
+        videosList.map((video, index) => (
+          <Link key={video?.id + index} to={"/watch?v=" + video?.id}>
+            <VideoCard info={video} />
+          </Link>
+        ))
+      )}
     </div>
   );
 };

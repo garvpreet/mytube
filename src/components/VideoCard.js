@@ -19,7 +19,7 @@ const VideoCard = ({ info }) => {
   };
 
   return (
-    <div className="flex flex-col m-2 w-[312px] h-[300px] rounded-lg">
+    <div className="flex flex-col m-2 w-[312px] h-[300px] rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600">
       <img
         className="rounded-lg mb-2"
         alt="thumbnail"

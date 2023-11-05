@@ -1,9 +1,5 @@
-const YT_API_KEY = "AIzaSyDPVe7Xz5PgxFjWsdULr_Ju0ckDaltcedM";
+const YT_API_KEY = "AIzaSyBcSzkBv3VyohwPj2N_YCCx7me9_qbhdjo";
+const BASE_URL = "https://www.googleapis.com/youtube/v3/";
 
-export const CHANNEL_API =
-  "https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&key=" +
-  YT_API_KEY;
-
-export const VIDEO_API =
-  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=CA&key=" +
-  YT_API_KEY;
+export const VIDEO_API = `${BASE_URL}videos?part=snippet%2CcontentDetails%2Cstatistics&maxResults=50&chart=mostPopular&regionCode=CA&key=${YT_API_KEY}`;
+export const CHANNEL_API = `${BASE_URL}channels?part=snippet%2CcontentDetails%2Cstatistics&key=${YT_API_KEY}`;
