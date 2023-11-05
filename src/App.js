@@ -5,6 +5,9 @@ import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 import AppStore from "./utils/AppStore";
 import "./app.css";
+import { Suspense, lazy } from "react";
+
+const SearchResultsPage = lazy(() => import("../src/components/SearchResults"));
 
 export const appRouter = createBrowserRouter([
   {
@@ -19,6 +22,14 @@ export const appRouter = createBrowserRouter([
           {
             path: "/",
             element: <MainContainer />,
+          },
+          {
+            path: "search",
+            element: (
+              <Suspense>
+                <SearchResultsPage />
+              </Suspense>
+            ),
           },
         ],
       },

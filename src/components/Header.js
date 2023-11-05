@@ -19,7 +19,7 @@ const Header = () => {
   const [queryText, setQueryText] = useState("");
   const [smSearch, setsmSearch] = useState(false);
   const [searchSuggestions, setSearchSuggestions] = useState([]);
-  const [showSuggestions, setshowSuggestions] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const suggestions = useSelector((store) => store.search);
 
   const [darkMode, setDarkMode] = useState(false);
@@ -33,8 +33,8 @@ const Header = () => {
     document.documentElement.classList.toggle("dark", darkMode);
   };
 
-  // Toggle NavBar
-  const HamburgerOnClickHandler = () => {
+  // Toggle sidebar
+  const toggleSidebar = () => {
     dispatcher(toggleMenu());
   };
 
@@ -72,7 +72,7 @@ const Header = () => {
     e.preventDefault();
     // console.log("Navigate");
     navigate("/search?q=" + queryText, { relative: "path" });
-    setshowSuggestions(false);
+    setShowSuggestions(false);
   };
 
   return (
@@ -97,13 +97,13 @@ const Header = () => {
         }`}
       >
         <IoIosMenu
-          onClick={HamburgerOnClickHandler}
+          onClick={toggleSidebar}
           className="text-xl md:text-3xl dark:text-white cursor-pointer"
         />
         <Link to="/">
           <img
             className="h-4 md:h-6 md:mx-4 mx-1"
-            alt="youtubeLogo"
+            alt="Youtube Logo"
             src={darkMode ? ytLogoDark : ytLogoDefault}
           ></img>
         </Link>
@@ -133,7 +133,7 @@ const Header = () => {
               if (screenWidth <= 768) {
                 if (!smSearch) setsmSearch(true);
               }
-              setshowSuggestions(true);
+              setShowSuggestions(true);
             }}
             // When not Focused Suggestions are removed
             // Latency of 200s is kept to enable clicking suggestions so that this wont get triggered
@@ -142,7 +142,7 @@ const Header = () => {
               // if(screenWidth<=640){
               //   if(smSearch) setsmSearch(false);
               // }
-              setTimeout(() => setshowSuggestions(false), 200);
+              setTimeout(() => setShowSuggestions(false), 200);
             }}
             //  Checking which key is Entered
             onKeyDown={(e) => {
