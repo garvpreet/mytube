@@ -8,7 +8,6 @@ import { setChannelId } from "../utils/ChannelIdSlice";
 import { closeMenu } from "../utils/SideMenuSlice";
 import { SEARCH_RESULTS_API } from "../utils/Constants";
 
-// Search Results
 const SearchResults = () => {
   const [params] = useSearchParams();
   const query = params.get("q");

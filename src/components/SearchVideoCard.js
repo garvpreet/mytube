@@ -4,7 +4,6 @@ import { CHANNEL_IMG_API } from "../utils/Constants";
 import ShimmerSearchResults from "./ShimmerSearchResults";
 import VideoPublishedTime from "./VideoPublishedTime";
 
-// Each Video Card in Search Results Page
 const SearchVideoCard = ({ data }) => {
   const [details, setDetails] = useState(null);
   const channelId = data?.channelId;
@@ -13,7 +12,6 @@ const SearchVideoCard = ({ data }) => {
     getChannelImage();
   }, []);
 
-  // Getting Channel Data with Channel Id
   const getChannelImage = async () => {
     const data = await fetch(CHANNEL_IMG_API + channelId);
     const json = await data.json();
