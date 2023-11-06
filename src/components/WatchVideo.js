@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { closeMenu } from "../utils/SideMenuSlice";
 import WatchVideoDetails from "./WatchVideoDetails";
-//import Recommendations from './Recommendations';
+import Recommendations from "./Recommendations";
 
 const WatchVideo = () => {
   const dispatch = useDispatch();
@@ -41,11 +41,9 @@ const WatchVideo = () => {
       {
         <div className="col-span-4 p-1 hidden md:block">
           <div className="w-full">
-            <div className="w-full flex justify-center rounded-3xl ">
-              Recommendations
-            </div>
+            <div className="w-full flex justify-center rounded-3xl "></div>
           </div>
-          {/* <Recommendations/> */}
+          <Recommendations />
         </div>
       }
     </div>

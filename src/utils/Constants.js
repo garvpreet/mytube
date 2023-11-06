@@ -10,3 +10,5 @@ export const SEARCH_RESULTS_API = `${BASE_URL_2}search?part=snippet&maxResults=2
 export const CHANNEL_IMG_API = `${BASE_URL_2}channels?part=snippet%2CcontentDetails%2Cstatistics&key=${YT_API_KEY}&id=`;
 export const VIDEO_DETAILS_API = `${BASE_URL_2}videos?part=snippet%2CcontentDetails%2Cstatistics&key=${YT_API_KEY}&id=`;
 export const VIDEO_COMMENT_DETAILS_API = `${BASE_URL_1}commentThreads?textFormat=plainText&part=snippet&maxResults=100&order=relevance&key=${YT_API_KEY}&videoId=`;
+
+export const VIDEO_RECOMMENDATIONS_API = `${BASE_URL_1}activities?part=snippet%2CcontentDetails&maxResults=50&regionCode=CA&key=${YT_API_KEY}&channelId=`;

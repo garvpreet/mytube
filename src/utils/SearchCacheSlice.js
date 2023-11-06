@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Storing Cache - Debouncing
-const searchCache = createSlice({
+const searchCacheSlice = createSlice({
   name: "search",
   initialState: {},
   reducers: {
@@ -10,5 +9,5 @@ const searchCache = createSlice({
     },
   },
 });
-export const { addCacheItem } = searchCache.actions;
-export default searchCache.reducer;
+export const { addCacheItem } = searchCacheSlice.actions;
+export default searchCacheSlice.reducer;
