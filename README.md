@@ -34,11 +34,11 @@ To run this project locally, follow these steps:
 
 ### Home Page
 
-![Home Page](./project-snippets/default-theme.png)
+![Home Page](./project-snippets/default%2Dtheme.png)
 
 ### Home Page (Dark Mode)
 
-![Home Page](./project-snippets/dark-theme.png)
+![Home Page](./project-snippets/dark%2Dtheme.png)
 
 ### Search Suggestions
 
@@ -46,16 +46,16 @@ To run this project locally, follow these steps:
 
 ### Search Results
 
-![Search Results](./project-snippets/search-results.png)
+![Search Results](./project-snippets/search%2Dresults.png)
 
 ### Sidebar Closed
 
-![Sidebar Closed](./project-snippets/sidebar-closed.png)
+![Sidebar Closed](./project-snippets/sidebar%2Dclosed.png)
 
 ### Infinite Scroll while scrolling down
 
-![Infinite Scroll](./project-snippets/infinite-scroll.png)
+![Infinite Scroll](./project-snippets/infinite%2Dscroll.png)
 
 ### Watch Page and Recommendations
 
-![Watch Page](./project-snippets/WatchPage.png)
+![Watch Page](./project-snippets/watch%2Dpage.png)
