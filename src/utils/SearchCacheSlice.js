@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const searchCacheSlice = createSlice({
-  name: "search",
+  name: "searchCacheSlice",
   initialState: {},
   reducers: {
     addCacheItem: (state, action) => {

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // sideMenuSlice to toggle the sidebar
 const sideMenuSlice = createSlice({
-  name: "SideMenuSlice",
+  name: "sideMenuSlice",
   initialState: {
     isMenuOpen: true,
   },
