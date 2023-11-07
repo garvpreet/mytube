@@ -3,7 +3,7 @@
 ### Technologies Used
 
 - React: Primary front-end library.
-- Redux: State management.
+- Redux Toolkit: State management.
 - React Router: Routing within the application.
 - Parcel: Project Bundler.
 - Babel: Transcompiler for modern JavaScript.
